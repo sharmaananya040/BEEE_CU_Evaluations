@@ -1,0 +1,26 @@
+int ldr = A0;
+int led = 13;
+
+ void setup()
+{
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int ldrdo = analogRead(ldr);
+  
+  if (ldrdo <= 40){
+    
+  digitalWrite(13, HIGH);
+  delay(2); 
+  digitalWrite(13, LOW);
+  delay(2); 
+  }
+  else {
+    
+  digitalWrite(13,LOW);
+    
+  }
+}
